@@ -1,0 +1,14 @@
+.personal-bio {
+    margin-bottom: 20px;
+}
+
+.personal-bio h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.personal-bio p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
