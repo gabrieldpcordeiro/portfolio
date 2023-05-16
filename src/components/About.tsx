@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import PersonalBio from './PersonalBio';
 import Skills from './Skills';
 import Education from './Education';
@@ -14,6 +14,7 @@ const About: React.FC = () => {
 
     return (
         <div className="about">
+            <h1>About Me</h1>
             <div className="about-tabs">
                 <button
                     className={`about-tab ${activeTab === 'bio' ? 'active' : ''}`}
@@ -40,10 +41,10 @@ const About: React.FC = () => {
                     Work Experience
                 </button>
             </div>
-            {activeTab === 'bio' && <PersonalBio />}
-            {activeTab === 'skills' && <Skills />}
-            {activeTab === 'education' && <Education />}
-            {activeTab === 'experience' && <WorkExperience />}
+            {activeTab === 'bio' && <PersonalBio/>}
+            {activeTab === 'skills' && <Skills/>}
+            {activeTab === 'education' && <Education/>}
+            {activeTab === 'experience' && <WorkExperience/>}
         </div>
     );
 };
