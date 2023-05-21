@@ -1,46 +1,35 @@
-# Getting Started with Create React App
+This is a portfolio website built with React and TypeScript, showcasing my work and skills as software engineer. The portfolio provides an overview of projects, technical expertise, and contact information.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Features
+React: The portfolio is developed using React, a popular JavaScript library for building user interfaces.
+TypeScript: TypeScript is used to add static typing to JavaScript, providing better code quality and tooling support.
+Responsive Design: The portfolio is designed to be responsive and adaptable to different screen sizes and devices.
+Project Showcase: The portfolio includes a section to showcase projects, highlighting the engineer's technical skills and accomplishments.
+Skills and Expertise: The portfolio presents the engineer's technical skills and areas of expertise, providing a comprehensive overview of their capabilities.
+Contact Information: The portfolio includes contact information, enabling potential clients or employers to get in touch easily.
+Installation
+Clone the repository: git clone https://github.com/gabrieldpcordeiro/portfolio.git
+Navigate to the project directory: cd portfolio
+Install the dependencies: npm install
+Usage
+Start the development server: npm start
+Open the portfolio in your browser: http://localhost:3000
+Configuration
+The portfolio can be easily configured to personalize the content and layout. Here are the main files to modify:
 
-## Available Scripts
+src/data/projects.ts: Update this file to add or modify project information. Each project is represented as an object with properties like title, description, technologies, and githubLink.
+src/data/skills.ts: Modify this file to update the skills and areas of expertise. The skills are represented as an array of strings.
+src/components/Contact.tsx: Update this file to add your own contact information. Modify the fields like email, phone, and website with your preferred contact details.
+src/components/Footer.tsx: Customize the footer section by modifying this file. You can update the text and add your own links or information.
+Deployment
+To deploy the portfolio, follow these steps:
 
-In the project directory, you can run:
+Build the optimized version of the portfolio: npm run build
+Deploy the contents of the build folder to a web server or hosting platform of your choice.
+Credits
+This portfolio is inspired by modern web development practices and utilizes the following technologies:
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+React: https://reactjs.org
+TypeScript: https://www.typescriptlang.org
+License
+This portfolio is open-source and released under the MIT License. Feel free to modify and customize it to suit your needs.
