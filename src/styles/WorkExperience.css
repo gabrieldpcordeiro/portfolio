@@ -1,0 +1,43 @@
+.timeline {
+    position: relative;
+}
+
+.timeline-item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.timeline-content {
+    margin-left: 40px;
+}
+
+.timeline-date {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+    padding: 5px 10px;
+    background-color: #f1f1f1;
+}
+
+/* Optional: Add styling to create a timeline visual */
+.timeline:before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #ccc;
+}
+
+.timeline-item:first-child .timeline-date {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.timeline-item:last-child:before {
+    bottom: 0;
+}

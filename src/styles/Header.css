@@ -1,0 +1,93 @@
+.header {
+    display: flex;
+    align-items: center;
+    padding: 1.25em;
+    text-align: center;
+    justify-content: space-evenly;
+    margin: 20vh 0 0 0 ;
+}
+
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Adjust the spacing as needed */
+.profile-image-container {
+    margin-bottom: 1rem;
+}
+
+.job-title {
+    margin-top: 0.5rem;
+}
+.profile-image {
+    width: 9em;
+    height: 9em;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.header-title {
+    font-size: 1.5em;
+    margin-bottom: 0.625em;
+}
+
+.header-subtitle {
+    font-size: 1em;
+}
+
+.header-description {
+    font-size: 0.5em;
+
+    text-align: center;
+    margin-top: 1rem;
+}
+.header-description p {
+    white-space: pre-line;
+}
+.header-description p::after {
+    content: ". \a";
+    white-space: pre;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5em; /* Add more margin to increase spacing */
+}
+
+.social-icon {
+    margin: 0 0.5em; /* Add horizontal margin to create space between icons */
+    color: #000; /* Customize the icon color */
+}
+.profile-image-container .social-icons {
+    margin-top: 1em; /* Add margin to create spacing */
+}
+@media (min-width: 768px) {
+    .header-title {
+        font-size: 2em;
+        margin-bottom: 1.25em;
+    }
+
+    .header-subtitle {
+        font-size: 1.125em;
+    }
+
+    .header-description {
+        font-size: 1em;
+        margin-top: 1.25em;
+    }
+
+    .profile-image {
+        width: 12em;
+        height: 12em;
+    }
+}

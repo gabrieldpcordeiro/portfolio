@@ -1,0 +1,34 @@
+/* Portfolio.css */
+
+.portfolio {
+    padding: 40px;
+}
+
+.portfolio-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+.portfolio-subtitle {
+    font-size: 18px;
+    color: #888;
+}
+
+/* ... Rest of the portfolio styles ... */
+
+@media (max-width: 768px) {
+    .portfolio {
+        padding: 20px;
+    }
+
+    .portfolio-title {
+        font-size: 24px;
+    }
+
+    .portfolio-subtitle {
+        font-size: 16px;
+    }
+
+    /* ... Adjust other styles for mobile ... */
+}

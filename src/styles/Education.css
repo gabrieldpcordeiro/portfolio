@@ -1,0 +1,28 @@
+.education {
+    margin-bottom: 20px;
+}
+
+.education h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.education-list {
+    list-style: none;
+    padding: 0;
+}
+
+.education-list li {
+    margin-bottom: 10px;
+}
+
+.education-list h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.education-list p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
