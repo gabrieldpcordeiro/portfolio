@@ -1,15 +1,15 @@
-# Software Engineer Portfolio
+# Project
 
-This is a portfolio website built with React and TypeScript, showcasing the work and skills of a software engineer. The portfolio provides an overview of projects, technical expertise, and contact information.
+This is my portfolio website built with React and TypeScript, showcasing my work and skills as a software engineer. The portfolio provides an overview of my projects, technical expertise, and contact information.
 
 ## Features
 
 - **React**: The portfolio is developed using React, a popular JavaScript library for building user interfaces.
 - **TypeScript**: TypeScript is used to add static typing to JavaScript, providing better code quality and tooling support.
 - **Responsive Design**: The portfolio is designed to be responsive and adaptable to different screen sizes and devices.
-- **Project Showcase**: The portfolio includes a section to showcase projects, highlighting the engineer's technical skills and accomplishments.
-- **Skills and Expertise**: The portfolio presents the engineer's technical skills and areas of expertise, providing a comprehensive overview of their capabilities.
-- **Contact Information**: The portfolio includes contact information, enabling potential clients or employers to get in touch easily.
+- **Project Showcase**: The portfolio includes a section to showcase my projects, highlighting my technical skills and accomplishments.
+- **Skills and Expertise**: The portfolio presents my technical skills and areas of expertise, providing a comprehensive overview of my capabilities.
+- **Contact Information**: The portfolio includes my contact information, enabling potential clients or employers to get in touch easily.
 
 ## Installation
 
