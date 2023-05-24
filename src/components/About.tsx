@@ -4,6 +4,7 @@ import Skills from './Skills';
 import Education from './Education';
 import WorkExperience from './WorkExperience';
 import '../styles/About.css';
+import {workExperienceData} from "../data/workExperienceData";
 
 const About: React.FC = () => {
     const [activeTab, setActiveTab] = useState('bio');
@@ -44,7 +45,7 @@ const About: React.FC = () => {
             {activeTab === 'bio' && <PersonalBio/>}
             {activeTab === 'skills' && <Skills/>}
             {activeTab === 'education' && <Education/>}
-            {activeTab === 'experience' && <WorkExperience/>}
+            {activeTab === 'experience' && <WorkExperience />}
         </div>
     );
 };
