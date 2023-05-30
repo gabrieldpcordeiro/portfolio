@@ -2,7 +2,6 @@ import React from 'react';
 import '../styles/Portfolio.css';
 import Projects from "./Projects";
 import About from "./About";
-
 const Portfolio: React.FC = () => {
 
 
