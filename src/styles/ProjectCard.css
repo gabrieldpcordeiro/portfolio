@@ -1,42 +1,47 @@
-.project-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    margin: 10px;
-    background-color: #fff;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    height: 300px;
-    text-align: center;
-}
+/*.card {*/
+/*    border: 1px solid #ddd;*/
+/*    border-radius: 5px;*/
+/*    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
+/*    padding: 20px;*/
+/*    margin: 10px;*/
+/*    width: calc(25% - 120px); !* Show 4 projects per row on desktop (25% width with margin) *!*/
+/*    height: 300px;*/
+/*}*/
 
-.project-card-title {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
+/*!* Adjust image size to prevent distortion *!*/
+/*.card img {*/
+/*    width: 100%;*/
+/*    height: auto;*/
+/*    object-fit: contain; !* Maintain aspect ratio and cover the container *!*/
+/*}*/
 
-.project-card-description {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
+/*@media (max-width: 767px) {*/
+/*    .card {*/
+/*        width: calc(50% - 120px); !* Show 2 projects per row on mobile (50% width with margin) *!*/
+/*        height: 200px;*/
+/*    }*/
+/*}*/
 
-.project-card-image {
-    width: 100%;
-    height: auto;
-    max-height: 200px; /* Adjust the maximum height as needed */
-    object-fit: cover;
-}
+/*@media (min-width: 768px) and (max-width: 1023px) {*/
+/*    .card {*/
+/*        width: calc(33.33% - 120px); !* Show 3 projects per row on tablets (33.33% width with margin) *!*/
+/*        height: 250px;*/
+/*    }*/
+/*}*/
 
-.learn-more-link {
-    margin-top: auto;
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
 
-.learn-more-link:hover {
-    color: #007bff;
-}
+/*!* Your other card styles go here *!*/
+
+/*.learn-more-link {*/
+/*    margin-top: auto;*/
+/*    text-decoration: none;*/
+/*    color: #333;*/
+/*    font-weight: bold;*/
+/*    transition: color 0.3s ease;*/
+/*}*/
+
+/*.learn-more-link:hover {*/
+/*    color: #007bff;*/
+/*}*/
+
+

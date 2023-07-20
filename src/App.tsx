@@ -2,15 +2,13 @@ import React from 'react';
 import './App.css';
 import Main from "./components/Main";
 import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Navbar from "./components/Navbar";
-import {menuData} from "./data/menuData";
+import Hero from "./components/Hero";
+
 
 function App() {
     return (
         <div id='home' className="App">
-            <Navbar  links={menuData}/>
-            <Header/>
+            <Hero/>
             <Main/>
             <Footer/>
         </div>

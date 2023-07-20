@@ -17,5 +17,29 @@ export const Projects: Project[] = [
         technologies: ['JavaScript', 'HTML', 'CSS'],
         features: ['Feature 1', 'Feature 2'],
     },
+    {
+        id: 3,
+        title: 'Project 3',
+        description: 'Pellentesque ac enim a justo convallis fermentum.',
+        imageUrl: getImageUrl('puppy.jpg'),
+        technologies: ['JavaScript', 'HTML', 'CSS'],
+        features: ['Feature 1', 'Feature 2'],
+    },
+    {
+        id: 4,
+        title: 'Project 4',
+        description: 'Pellentesque ac enim a justo convallis fermentum.',
+        imageUrl: getImageUrl('puppy.jpg'),
+        technologies: ['JavaScript', 'HTML', 'CSS'],
+        features: ['Feature 1', 'Feature 2'],
+    },
+    {
+        id: 5,
+        title: 'Project 5',
+        description: 'Pellentesque ac enim a justo convallis fermentum.',
+        imageUrl: getImageUrl('puppy.jpg'),
+        technologies: ['JavaScript', 'HTML', 'CSS'],
+        features: ['Feature 1', 'Feature 2'],
+    },
     // Add more projects as needed
 ];
