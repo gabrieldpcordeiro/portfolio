@@ -9,11 +9,14 @@ export interface Project {
 
 // workExperience.ts
 
-export interface workExperiences {
-    id: number;
-    company: string;
-    position: string;
-    duration: string;
-    responsibilities: string[];
+export interface About {
+    bio: string;
+    imageUrl: string;
+    skills: string[];
 
+}
+
+export interface ImageProps {
+    name: string;
+    alt: string;
 }

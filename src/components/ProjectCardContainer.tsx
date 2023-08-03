@@ -2,7 +2,6 @@ import React from 'react';
 import { Project } from '../types/types';
 import ProjectCard from './ProjectCard';
 import '../styles/ProjectCardContainer.css';
-import projectCarousel from "./ProjectCardContainer";
 
 interface ProjectCarouselProps {
     projects: Project[];

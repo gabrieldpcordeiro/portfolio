@@ -1,51 +1,45 @@
-import React, {useState} from 'react';
-import PersonalBio from './PersonalBio';
-import Skills from './Skills';
-import Education from './Education';
-import WorkExperience from './WorkExperience';
+import React, { useState, useEffect } from 'react';
+import { About as AboutType } from '../types/types';
+import { skillsData } from '../data/skillsData';
+import { getImageByName } from "../utils/imageUtils"; // Update the import path
 import '../styles/About.css';
-import {workExperienceData} from "../data/workExperienceData";
 
-const About: React.FC = () => {
-    const [activeTab, setActiveTab] = useState('bio');
+interface AboutProps {
+    about: AboutType;
+}
 
-    const handleTabClick = (tab: string) => {
-        setActiveTab(tab);
-    };
+const About: React.FC<AboutProps> = ({ about }) => {
+    const { bio, imageUrl, skills } = about;
+    const [imageSrc, setImageSrc] = useState<string | null>(null);
+
+    useEffect(() => {
+        const fetchImage = async () => {
+            const src = await getImageByName({ name: imageUrl, alt: "My Profile Picture" });
+            setImageSrc(src);
+        };
+        fetchImage();
+    }, [imageUrl]);
 
     return (
         <div className="about">
-            <h1>About Me</h1>
-            <div className="about-tabs">
-                <button
-                    className={`about-tab ${activeTab === 'bio' ? 'active' : ''}`}
-                    onClick={() => handleTabClick('bio')}
-                >
-                    Personal Bio
-                </button>
-                <button
-                    className={`about-tab ${activeTab === 'skills' ? 'active' : ''}`}
-                    onClick={() => handleTabClick('skills')}
-                >
-                    Skills
-                </button>
-                <button
-                    className={`about-tab ${activeTab === 'education' ? 'active' : ''}`}
-                    onClick={() => handleTabClick('education')}
-                >
-                    Education
-                </button>
-                <button
-                    className={`about-tab ${activeTab === 'experience' ? 'active' : ''}`}
-                    onClick={() => handleTabClick('experience')}
-                >
-                    Work Experience
-                </button>
+            <div className="picture">
+                {imageSrc ? ( // Check if imageSrc is not null before rendering
+                    <img src={imageSrc} alt="My Profile Picture" />
+                ) : (
+                    <div>No Image Found</div> // Handle the case when imageSrc is null
+                )}
             </div>
-            {activeTab === 'bio' && <PersonalBio/>}
-            {activeTab === 'skills' && <Skills/>}
-            {activeTab === 'education' && <Education/>}
-            {activeTab === 'experience' && <WorkExperience />}
+            <div className="bio">
+                <p>{bio}</p>
+            </div>
+            <div className="skills">
+                <h2>Skills</h2>
+                <ul className="skill-list">
+                    {skillsData.map((skill, index) => (
+                        <li key={index}>{skill}</li>
+                    ))}
+                </ul>can u
+            </div>
         </div>
     );
 };
