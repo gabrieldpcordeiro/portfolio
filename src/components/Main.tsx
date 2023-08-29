@@ -13,11 +13,10 @@ const Main: React.FC = () => {
     return (
         <>
             <main>
-                <Projects/>
-
                 {AboutData.map((about) => (
                     <About key={about.bio} about={about} />
                 ))}
+                <Projects/>
                 <ContactForm/>
             </main>
         </>

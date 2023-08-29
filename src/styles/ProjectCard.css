@@ -1,4 +1,13 @@
+.fade-in-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
 
+.fade-in-on-scroll.fade-in-active {
+    opacity: 1;
+    transform: translateY(0);
+}
 .card {
     position: relative;
     border: 1px solid #ddd;

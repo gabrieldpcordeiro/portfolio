@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Project } from '../types/types';
 import { Link } from 'react-router-dom';
 import { getImageByName } from "../utils/imageUtils"; // Update the import path
@@ -11,6 +11,8 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     const [isFlipped, setIsFlipped] = useState(false);
     const [imageSrc, setImageSrc] = useState<string | null>(null);
+    const cardRef = useRef<HTMLDivElement>(null);
+    const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
         const fetchImage = async () => {
@@ -20,12 +22,30 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         fetchImage();
     }, [project.imageUrl, project.title]);
 
+    useEffect(() => {
+        const checkVisibility = () => {
+            if (cardRef.current) {
+                const rect = cardRef.current.getBoundingClientRect();
+                const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+                setIsVisible(isVisible);
+            }
+        };
+
+        // Add event listener to check visibility when scrolling
+        window.addEventListener('scroll', checkVisibility);
+        checkVisibility(); // Initial check
+
+        // Clean up the event listener when the component unmounts
+        return () => {
+            window.removeEventListener('scroll', checkVisibility);
+        };
+    }, []);
     const handleCardFlip = () => {
         setIsFlipped(!isFlipped);
     };
 
     return (
-        <div className={`card ${isFlipped ? 'is-flipped' : ''}`} onClick={handleCardFlip}>
+        <div className={`card ${isFlipped ? 'is-flipped' : ''} ${isVisible ? 'fade-in-on-scroll fade-in-active' : ''}`} onClick={handleCardFlip} ref={cardRef}>
             <div className="card-front">
                 <h2 className="project-card-title">{project.title}</h2>
                 {imageSrc ? ( // Check if imageSrc is not null before rendering
