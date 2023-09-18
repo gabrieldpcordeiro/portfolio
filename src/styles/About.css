@@ -1,12 +1,11 @@
 /* About.css */
 
 .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
     width: 100%;
     padding: 60px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 1.5s ease, transform 1.5s ease;
@@ -17,23 +16,23 @@
     transform: translateY(0);
 }
 
+.title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
 .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 1 part for picture, 1 part for bio and skills */
+    gap: 3em; /* Spacing between columns */
+    width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f9f9f9;
-    border: 1px solid #3498db; /* Blue border around the image */
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .picture {
-    flex: 1;
-    text-align: center;
-    padding: 20px;
+    text-align: left;
 }
 
 .picture img {
@@ -44,13 +43,12 @@
 }
 
 .bio {
-    flex: 2;
-    padding: 20px;
     text-align: left;
+
 }
 
-.bio h1 {
-    font-size: 28px;
+.bio h2 {
+    font-size: 24px;
     margin-bottom: 20px;
     color: #333;
 }
@@ -61,14 +59,24 @@
     line-height: 1.6;
 }
 
-.skills {
-    flex: 1;
-    padding: 20px;
+.skills-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Create columns with a minimum width of 200px */
+    gap: 20px; /* Spacing between columns */
 }
 
-.skills h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
+.category {
+    background-color: #f9f9f9;
+    border: 1px solid #3498db;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.category h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
     color: #333;
 }
 
@@ -76,38 +84,44 @@
     list-style-type: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    flex-wrap: wrap; /* Display skills side by side */
 }
 
 .skill-list li {
     font-size: 18px;
-    margin-right: 20px; /* Add space between skills */
     margin-bottom: 12px;
     color: #555;
 }
 
-/* Responsive Styles for Mobile */
+/* Mobile styles */
 @media screen and (max-width: 768px) {
     .about {
         padding: 40px 0;
     }
 
+    .title {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
     .content {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr; /* Display one column for mobile */
+        gap: 1em; /* Reduce spacing between elements */
+    }
+
+    .picture {
+        text-align: center;
     }
 
     .picture img {
-        max-width: 200px;
+        max-width: 200px; /* Adjust image size for mobile */
     }
 
     .bio {
-        padding: 0 20px;
+        text-align: center;
     }
 
-    .bio h1 {
-        font-size: 24px;
+    .bio h2 {
+        font-size: 22px;
         margin-bottom: 10px;
     }
 
@@ -115,17 +129,28 @@
         font-size: 16px;
     }
 
-    .skills {
-        padding: 10px;
+    .skills-categories {
+        grid-template-columns: 1fr; /* Display one column for mobile */
     }
 
-    .skills h2 {
-        font-size: 22px;
+    .category {
+        padding: 10px;
+
+    }
+
+    .category h3 {
+        font-size: 20px;
         margin-bottom: 10px;
     }
 
     .skill-list li {
         font-size: 16px;
-        margin-right: 10px;
+    }
+}
+
+/* Tablet styles */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .content {
+        gap: 2em; /* Adjust spacing between elements for tablets */
     }
 }
