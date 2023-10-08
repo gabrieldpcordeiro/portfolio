@@ -5,6 +5,7 @@ export interface Project {
     imageUrl: string;
     technologies: string[];
     features: string[];
+    app: string[];
 }
 
 // workExperience.ts
